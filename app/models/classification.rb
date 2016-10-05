@@ -8,7 +8,8 @@ class Classification < ActiveRecord::Base
 
   def self.longest
     # binding.pry
-    Classification.joins(:boats).where("boats.length" => 34)
+    Boat.longest.classifications
+    # Classification.joins(:boats).where("boats.length" => 34)
   end
 
 end
